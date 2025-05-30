@@ -98,9 +98,28 @@ main h2 {
 }
 
 /* Footer */
-footer {
+.site-footer {
+  background-color: #f8f8ff;
+  color: #4b0082;
+  padding: 30px 20px;
   text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  border-top: 2px solid #e0e0e0;
   margin-top: 40px;
-  color: #999;
+}
+
+.site-footer a {
+  color: #4b0082;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+.contact-info p,
+.hashtags p {
+  margin: 8px 0;
   font-size: 14px;
 }
+
