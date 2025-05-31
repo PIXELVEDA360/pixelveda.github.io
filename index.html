@@ -1,82 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PixelVeda | Code Meets Creativity</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Veda</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-  <div class="logo-container">
-    <img src="PIXEL%20BY%20PIXEL.png" alt="Pixel by Pixel Logo" class="logo-img" />
-    <div class="logo-text">PixelVeda</div>
-  </div>
-<!-- Navigation -->
-<nav>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#tutorials">Tutorials</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="Pixel Veda Logo" />
+      <span>Pixel Veda</span>
+    </div>
+    <ul>
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#about" class="nav-link">About Us</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+      <li><a href="#terms" class="nav-link">Terms</a></li>
+      <li><a href="#privacy" class="nav-link">Privacy</a></li>
+    </ul>
+  </nav>
 
-<!-- Home Section -->
-<section id="home">
-  <h1>Welcome to PixelVeda</h1>
-</section>
-
-<!-- Projects Section -->
-<section id="projects">
-  <h2>Projects</h2>
-  <p>🚧 Under Maintenance</p>
-</section>
-
-<!-- Tutorials Section -->
-<section id="tutorials">
-  <h2>Tutorials</h2>
-  <p>🚧 Under Maintenance</p>
-</section>
-
-<!-- Contact Section -->
-<section id="contact">
-  <h2>Contact Me</h2>
-  <p>Email: akshat.khyati127@gmail.com</p>
-</section>
-
-</header>
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Welcome to PixelVeda</h1>
-    <p>Where code meets calm — and creation begins.</p>
-  </section>
-
-  <!-- Main Content -->
   <main>
-    <section class="content">
-      <h2>Explore Our Universe</h2>
-      <p>About Pixelveda</p>
-     
+    <!-- Home Section -->
+    <section id="home" class="page active">
+      <div class="hero">
+        <img src="logo.png" class="hero-logo" alt="Pixel Veda Logo" />
+        <h1>Pixel <span>VEDA</span></h1>
+        <p class="subtitle">Whispers of wisdom, woven in code.</p>
+      </div>
+    </section>
+    <!-- About Us Section -->
+    <section id="about" class="page">
+      <h2>About Us</h2>
+      <p>
+        Pixel Veda is a digital creative studio blending technology with wisdom, crafting mind-blowing digital experiences. We believe in the power of code to tell stories and create impact.
+      </p>
+      <div class="about-cards">
+        <div class="about-card">
+          <h3>Our Vision</h3>
+          <p>Empowering creativity through digital innovation and timeless wisdom.</p>
+        </div>
+        <div class="about-card">
+          <h3>Our Values</h3>
+          <p>Creativity, Integrity, Collaboration, and Excellence in every pixel.</p>
+        </div>
+      </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="page">
+      <h2>Projects</h2>
+      <div class="projects-list">
+        <div class="project-card">
+          <h3>Digital Mandala</h3>
+          <p>A generative art project blending tradition and code.</p>
+        </div>
+        <div class="project-card">
+          <h3>Wisdom Bot</h3>
+          <p>An AI chatbot inspired by ancient texts, answering modern questions.</p>
+        </div>
+        <div class="project-card">
+          <h3>Pixel Library</h3>
+          <p>Open-source library for digital designers and coders.</p>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="page">
+      <h2>Contact Us</h2>
+      <div class="contact-info">
+        <p><strong>Address:</strong> 108 Digital Avenue, Wisdom City, CodeLand 400001</p>
+        <p><strong>Email:</strong> <a href="mailto:hello@pixelveda.com">hello@pixelveda.com</a></p>
+      </div>
+      <form id="contactForm">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+        <div id="form-status"></div>
+      </form>
+    </section>
+    <!-- Terms Section -->
+    <section id="terms" class="page">
+      <h2>Terms & Conditions</h2>
+      <p>
+        By using Pixel Veda’s website, you agree to comply with our terms. All content is for informational purposes only. Please use our resources responsibly.
+      </p>
+    </section>
+    <!-- Privacy Section -->
+    <section id="privacy" class="page">
+      <h2>Privacy Policy</h2>
+      <p>
+        Your privacy matters to us. We do not collect personal data beyond what you submit in the contact form. We never share your information.
+      </p>
     </section>
   </main>
 
-  <!-- Footer -->
- <footer class="site-footer">
-  <div class="footer-content">
-    <p>&copy; 2025 PixelVeda. All rights reserved.</p>
-    
-    <div class="contact-info">
-      <p><strong>Contact Email:</strong> <a href="mailto:akshat.khyati127@gmail.com">akshat.khyati127@gmail.com</a></p>
-      <p><strong>Address:</strong> Near Pankaj Departmental, Sultanpur, New Delhi, Delhi - 110030</p>
-    </div>
+  <footer>
+    <span>&copy; 2025 Pixel Veda. All rights reserved.</span>
+    <span>
+      <a href="#terms">Terms</a> | <a href="#privacy">Privacy</a>
+    </span>
+  </footer>
 
-    <div class="hashtags">
-      <p>#Coding &nbsp; #PixelVedas &nbsp; #PixelByPixel</p>
-    </div>
-  </div>
-</footer>
-
+  <script src="main.js"></script>
 </body>
 </html>
