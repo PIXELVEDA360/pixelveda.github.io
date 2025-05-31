@@ -1,129 +1,266 @@
-/* Reset default browser styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap');
+:root {
+  --primary: #e57399;
+  --accent: #4d375d;
+  --bg: #fff3f7;
+  --shadow: 0 2px 16px rgba(77, 55, 93, 0.14);
+}
+
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
+  background: var(--bg);
+  font-family: 'Roboto', Arial, sans-serif;
+  color: var(--accent);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Header */
-header {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fff;
-  padding: 15px 30px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  border-radius: 12px;
-  margin-bottom: 30px;
+  padding: 1.2rem 5vw;
+  background: linear-gradient(90deg, #fbc2eb 0%, #a6c1ee 100%);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-.logo-container {
+nav .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 0.7rem;
 }
 
-.logo-img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #4b0082;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+nav .logo img {
+  height: 48px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 0 7px #c8a2c8;
 }
 
-.logo-text {
-  font-size: 24px;
-  font-weight: bold;
-  color: #4b0082;
+nav .logo span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 1px;
 }
-
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 2rem;
 }
 
-nav a {
+nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: var(--accent);
   font-weight: 500;
-  transition: color 0.3s ease;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
 }
 
-nav a:hover {
-  color: #4b0082;
+nav ul li a.active, nav ul li a:hover {
+  background: var(--primary);
+  color: #fff;
 }
 
-/* Hero Section */
+main {
+  flex: 1;
+  padding: 3rem 5vw 2rem 5vw;
+}
+
+.page {
+  display: none;
+  animation: fadeIn 0.7s;
+}
+
+.page.active {
+  display: block;
+}
+
 .hero {
   text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(to right, #e0d4f7, #f7e5ff);
-  border-radius: 20px;
-  margin-bottom: 30px;
+  padding: 5vw 0 2vw 0;
+}
+
+.hero-logo {
+  width: 220px;
+  max-width: 80vw;
+  margin-bottom: 1.5rem;
+  border-radius: 17px;
+  box-shadow: 0 6px 28px #c8a2c8;
 }
 
 .hero h1 {
-  font-size: 42px;
-  color: #4b0082;
-  margin-bottom: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  color: var(--accent);
+  letter-spacing: 2px;
 }
 
-.hero p {
-  font-size: 18px;
-  color: #555;
+.hero h1 span {
+  color: var(--primary);
+  font-weight: 900;
+  font-size: 3.2rem;
 }
 
-/* Main Content */
-main .content {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+.subtitle {
+  font-size: 1.3rem;
+  color: #6c3483;
+  margin: 1rem 0 0 0;
+  letter-spacing: 1px;
 }
 
-main h2 {
-  margin-bottom: 10px;
-  color: #222;
+.about-cards {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
-/* Footer */
-.site-footer {
-  background-color: #f8f8ff;
-  color: #4b0082;
-  padding: 30px 20px;
+.about-card {
+  flex: 1 1 260px;
+  background: #f7e7f2;
+  border-radius: 13px;
+  padding: 1.3rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.9rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #fff;
+  box-shadow: var(--shadow);
+  border-radius: 13px;
+  flex: 1 1 260px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 7px solid var(--primary);
+  transition: transform 0.25s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 8px 28px #e57399aa;
+}
+
+.contact-info {
+  margin-bottom: 2rem;
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 430px;
+  gap: 1rem;
+  background: #f7e7f2;
+  padding: 1.6rem 1.2rem;
+  border-radius: 13px;
+  box-shadow: var(--shadow);
+}
+
+#contactForm label {
+  font-weight: 500;
+  color: var(--accent);
+}
+
+#contactForm input, #contactForm textarea {
+  border: 1.5px solid #e57399;
+  border-radius: 7px;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  background: #f9eaf7;
+  resize: none;
+  font-family: inherit;
+}
+
+#contactForm button {
+  background: linear-gradient(90deg,#e57399,#a6c1ee);
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 7px;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.23s;
+}
+
+#contactForm button:hover {
+  background: var(--accent);
+}
+
+#form-status {
+  min-height: 24px;
+  color: #27ae60;
+  margin-top: 0.7rem;
+  font-size: 1rem;
+}
+
+footer {
+  background: #e57399;
+  color: #fff;
   text-align: center;
-  font-family: 'Segoe UI', sans-serif;
-  border-top: 2px solid #e0e0e0;
-  margin-top: 40px;
+  padding: 1.2rem 0;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  letter-spacing: 0.5px;
 }
 
-.site-footer a {
-  color: #4b0082;
-  text-decoration: none;
-}
-
-.site-footer a:hover {
+footer a {
+  color: #fff;
+  margin: 0 0.4rem;
   text-decoration: underline;
 }
 
-.contact-info p,
-.hashtags p {
-  margin: 8px 0;
-  font-size: 14px;
-}
-html {
-  scroll-behavior: smooth;
+@media (max-width: 900px) {
+  nav ul {
+    gap: 1rem;
+  }
+  .about-cards, .projects-list {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
 }
 
-
+@media (max-width: 650px) {
+  nav {
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  nav .logo span {
+    font-size: 1.2rem;
+  }
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+  .hero h1 span {
+    font-size: 2.3rem;
+  }
+  main {
+    padding: 2rem 2vw 1.5rem 2vw;
+  }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
