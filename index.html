@@ -112,5 +112,76 @@
   </footer>
 
   <script src="main.js"></script>
+
+<!-- AI Bot Chat Widget Start -->
+<style>
+#ai-bot-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 320px;
+  max-width: 90vw;
+  background: #fff;
+  border: 2px solid #0078d7;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  font-family: Arial, sans-serif;
+  z-index: 9999;
+}
+#ai-bot-header {
+  background: #0078d7;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px 10px 0 0;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#ai-bot-messages {
+  height: 260px;
+  overflow-y: auto;
+  padding: 12px;
+  background: #f6f8fa;
+  font-size: 0.97em;
+}
+.ai-bot-message {
+  margin-bottom: 12px;
+}
+.ai-bot-user {
+  text-align: right;
+  color: #1a73e8;
+}
+.ai-bot-bot {
+  text-align: left;
+  color: #111;
+}
+#ai-bot-input-row {
+  display: flex;
+  border-top: 1px solid #eee;
+  padding: 8px;
+  background: #fff;
+}
+#ai-bot-input {
+  flex: 1;
+  padding: 7px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+#ai-bot-send {
+  margin-left: 6px;
+  background: #0078d7;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0 14px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#ai-bot-send:hover {
+  background: #005fa3;
+}
+</style>
+  
 </body>
 </html>
