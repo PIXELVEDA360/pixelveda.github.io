@@ -91,5 +91,4 @@ form.addEventListener('submit', async (e) => {
 
 // Greet on load
 appendMessage("Hi! I'm your coding assistant. Ask me any programming question.", 'bot');
-</script>
 <!-- AI Bot Chat Widget End -->
